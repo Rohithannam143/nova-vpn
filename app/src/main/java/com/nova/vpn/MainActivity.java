@@ -261,10 +261,9 @@ public final class MainActivity extends Activity {
     }
 
     private String safeMessage(Exception e) {
-        String message = e.getMessage();
-        if (message == null || message.trim().isEmpty()) return e.getClass().getSimpleName();
-        // Avoid showing config content or key material in UI errors.
-        return message.length() > 120 ? message.substring(0, 120) : message;
+        // Keep parser/backend exception details out of the UI: malformed profile
+        // errors can contain user-supplied configuration fragments.
+        return "Check the WireGuard profile and network, then try again.";
     }
 
     @Override
