@@ -1,0 +1,37 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+secrets/
+credentials/
+
+# Go
+/backend/bin/
+/backend/vendor/
+*.test
+coverage.out
+
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Android / IDE
+.gradle/
+.idea/
+*.iml
+local.properties
+.cxx/
+.externalNativeBuild/
+
+# OS
+.DS_Store
+Thumbs.db
